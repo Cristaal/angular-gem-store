@@ -1,8 +1,8 @@
 (function() {
-  var app = angular.module('store', [ ]);
+  var app = angular.module('store', []);
   
   app.controller('StoreController', function() {
-  	this.product = gems;
+  	this.products = gems;
   });	
 
   var gems = [
@@ -20,4 +20,4 @@
   	canPurchase: true,
   	soldOut: false,
   }
-]});
+]})();
