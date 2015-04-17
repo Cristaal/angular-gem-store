@@ -42,11 +42,11 @@
 
 	  <blockquote ng-repeat="review in product.reviews">...</blockquote>
 	  
-	  <form name="reviewForm">
+	  <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)" novalidate>
 	  	<blockquote>
-	  	  <b>Stars: {{review.stars}}</b>
-	  	  {{review.body}}
-	  	  <cite>by: {{review.author}}</cite>
+	  	  <b>Stars: {{reviewCtrl.review.stars}}</b>
+	  	  {{reviewCtrl.review.body}}
+	  	  <cite>by: {{reviewCtrl.review.author}}</cite>
 	  	</blockquote>
 	  	<select ng-model="review.stars">
 	  	  <option value="1">1 star</option>
